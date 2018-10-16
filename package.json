@@ -1,0 +1,25 @@
+{
+  "name": "http-to-https-proxy",
+  "version": "1.0.0",
+  "description": "Call API on HTTP when HTTPS is not ready for use on legacy technologies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/nodemon/bin/nodemon.js index.js",
+    "service": "./node_modules/forever/bin/forever start index.js",
+    "list": "./node_modules/forever/bin/forever list",
+    "stop": "./node_modules/forever/bin/forever stopall"
+  },
+  "author": "Lucas Souza <lucassampsouza@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "forever": "^0.15.3",
+    "forever-win": "^0.10.11",
+    "nodemon": "^1.18.4"
+  }
+}
